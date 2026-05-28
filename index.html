@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=2.0" />
+  <title>Exam Website - 8 Courses</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+<div class="page-wrapper">
+
+  <header class="page-header">
+    <h1>EXAM PORTAL</h1>
+    <p>Developed by Haile Kejela Megersa</p>
+  </header>
+
+  <!-- ===================== -->
+  <!-- SLIDE 1: STUDENT INFO -->
+  <!-- ===================== -->
+  <section id="studentPage">
+
+    <!-- ✅ ONLY PHOTO HERE -->
+    <div style="text-align:center; margin-bottom:10px;">
+      <img src="car home.jpg"
+     alt="Haile Kejela Photo"
+     style="width:160px;height: 160px;border-radius:50%;object-fit:cover;">
+    </div>
+
+    <h2>Student Login</h2>
+
+    <div class="student-info">
+      <input type="text" id="studentName" placeholder="Enter your name" />
+      <input type="text" id="studentId" placeholder="Enter your ID" />
+      <button id="okBtn" class="submit-btn">OK</button>
+    </div>
+
+  </section>
+
+  <!-- ===================== -->
+  <!-- SLIDE 2: EXAM SYSTEM -->
+  <!-- ===================== -->
+  <section id="examPage" class="hidden">
+
+    <section class="course-selection">
+      <label for="courseSelect">Choose a course:</label>
+      <select id="courseSelect">
+        <option value="IT Project Management">IT Project Management</option>
+        <option value="Database Management System">Database Management System</option>
+        <option value="Object Oriented Programming">Object Oriented Programming</option>
+        <option value="Data Communication and Computer Networking">Data Communication and Computer Networking</option>
+        <option value="System Analysis Design">System Analysis Design</option>
+        <option value="Introduction to Information Storage and Retrieval">Introduction to Information Storage and Retrieval</option>
+        <option value="Artificial Intelligence">Artificial Intelligence</option>
+        <option value="Internet Programming">Internet Programming</option>
+        <option value="Comprehensive Exit Exam">Comprehensive Exit Exam</option>
+      </select>
+    </section>
+
+    <section id="startPage" class="start-page">
+      <p class="start-text">Click below to start the exam.</p>
+      <button id="startBtn" class="submit-btn" disabled>Start Exam</button>
+    </section>
+
+    <section id="examContainer" class="exam-container hidden">
+
+      <div class="exam-header">
+        <span id="questionCounter">Question 1 of 100</span>
+      </div>
+
+      <div id="questions"></div>
+
+      <div class="nav-buttons">
+        <button id="prevBtn" class="nav-btn">← Previous</button>
+        <button id="submitBtn" class="submit-btn">Submit Answers</button>
+        <button id="nextBtn" class="nav-btn">Next →</button>
+      </div>
+
+      <div id="resultBox" class="result-box"></div>
+
+      <div class="result-actions hidden">
+        <button id="backBtn" class="submit-btn">Back to Courses</button>
+      </div>
+
+    </section>
+
+  </section>
+
+</div>
+
+<script>
+  window.onerror = function(message, source, lineno, colno, error) {
+    window.__lastPageError = { message, source, lineno, colno, stack: error && error.stack };
+    const el = document.getElementById('pageErrorBox');
+    if (el) el.textContent = JSON.stringify(window.__lastPageError);
+    return false;
+  };
+</script>
+
+<script src="script.js"></script>
+
+<div id="pageErrorBox" style="color:red; white-space:pre-wrap;"></div>
+
+</body>
+</html>

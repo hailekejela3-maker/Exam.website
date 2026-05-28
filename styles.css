@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #6faf34;
+  color: #222;
+}
+
+.page-wrapper {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #108b35;
+  border-radius: 12px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: 2.3rem;
+  color: #2a4d8f;
+}
+
+.page-header p {
+  margin: 10px 0 0;
+  color: #555;
+}
+
+.course-selection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.course-selection label {
+  font-weight: 600;
+}
+
+.course-selection select {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.question-card {
+  background: #fbfcff;
+  border: 1px solid #dbe2ed;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.question-card h2 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  color: #1f3a6f;
+}
+
+.answers {
+  display: grid;
+  gap: 10px;
+}
+
+.answer-option {
+  display: block;
+  padding: 10px 14px;
+  border: 1px solid #d1d9e6;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.answer-option:hover {
+  background: #eef4ff;
+  border-color: #a5b8e6;
+}
+
+.answer-option input {
+  margin-right: 10px;
+}
+
+.answer-option.correct {
+  background: #e6ffed;
+  border-color: #3fbf6f;
+}
+.hidden {
+  display: none;
+}
+.answer-option.incorrect {
+  background: #fff1f0;
+  border-color: #e0625d;
+}
+
+.explanation {
+  margin-top: 12px;
+  padding: 12px;
+  background: #f7fafc;
+  border-left: 4px solid #d1d5db;
+  color: #333;
+  border-radius: 8px;
+}
+
+.q-result {
+  margin-top: 8px;
+  font-weight: 700;
+  color: #1f3a6f;
+}
+
+.submit-btn {
+  width: 100%;
+  max-width: 220px;
+  margin: 10px auto 0;
+  display: block;
+  padding: 14px 0;
+  border: none;
+  border-radius: 999px;
+  background: #1d72b8;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+  .start-page {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .start-text {
+    margin: 0 0 18px;
+    font-size: 1.05rem;
+    color: #374151;
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+.submit-btn:hover {
+  background: #165a99;
+}
+
+.result-box {
+  margin-top: 22px;
+  padding: 18px;
+  border-radius: 14px;
+  background: #eef8f7;
+  border: 1px solid #b8e0d7;
+  color: #1d5c4f;
+  font-size: 1.06rem;
+}
+
+@media (max-width: 640px) {
+  .page-wrapper {
+    margin: 15px;
+    padding: 18px;
+  }
+}
